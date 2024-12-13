@@ -1,0 +1,42 @@
+int main() {
+    AlberoBinario<int> albero;
+
+    if (albero.inserisciRadice(3)) {
+        std::cout << "la radice è stata inserita con successo." << std::endl;
+    } else {
+        std::cout << "è presente un errore nell'inserimento della radice." << std::endl;
+    }
+
+    if (albero.inserisciFiglioSinistro(0, 5)) {
+        std::cout << "figlio sinistro è stato inserito con successo." << std::endl;
+    } else {
+        std::cout << "è presente un errore nell'inserimento del figlio sinistro." << std::endl;
+    }
+
+    if (albero.inserisciFiglioDestro(0, 7)) {
+        std::cout << "figlio destro è stato inserito con successo." << std::endl;
+    } else {
+        std::cout << "è presente un errore nell'inserimento del figlio destro." << std::endl;
+    }
+
+  
+    if (albero.inserisciFiglioSinistro(1, 9)) {
+        std::cout << "figlio sinistro è stato inserito correttamente nel nodo 1." << std::endl;
+    } else {
+        std::cout << "c'è stato un errore nell'inserimento di figlio destro nel nodo 1." << std::endl;
+    }
+
+    std::cout << "avvio stampa dell'albero:" << std::endl;
+    albero.stampa();
+
+    if (albero.rimuovi(4)) {
+        std::cout << "il nodo è stato eliminato." << std::endl;
+    } else {
+        std::cout << "c'è stato un errore nell'inserimento del nodo." << std::endl;
+    }
+
+    std::cout << "dopo aver rimoso il nodo foglia:" << std::endl;
+    albero.stampa();
+
+    return 0;
+}
